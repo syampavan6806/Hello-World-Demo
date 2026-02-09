@@ -16,7 +16,7 @@ jobs:
             pwd
   deploy:
     runs-on: ubuntu-latest
-    needs: scan
+    needs: build
     steps:
       - name: test deploy
         run: |
