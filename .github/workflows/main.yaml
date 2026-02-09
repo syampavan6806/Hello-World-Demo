@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: hello world demo
-        run: echo "Hello, World!"
-      - name: second step
-        run: echo "This is the second step of the workflow."
-      - name: display date and time 
-        run:  date
-      - name: list files in the repository
-        run: ls -la
+        run: |
+            echo "Hello, World! This is a demo workflow." 
+            date
+            ls -la
+            whoami
+            pwd
