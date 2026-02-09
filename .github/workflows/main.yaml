@@ -16,6 +16,7 @@ jobs:
             pwd
   deploy:
     runs-on: ubuntu-latest
+    needs: scan
     steps:
       - name: test deploy
         run: |
@@ -24,6 +25,7 @@ jobs:
             df -kh
   scan:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: test scan
         run: |
