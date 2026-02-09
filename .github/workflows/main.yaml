@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v5
       - name: execute demo script
         run: |
-            chmod +x demo.sh
+            chmod +x ./demo.sh
             ./demo.sh
     
   deploy:
