@@ -14,3 +14,19 @@ jobs:
             ls -la
             whoami
             pwd
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test deploy
+        run: |
+            echo "Deploying the application..." 
+            date
+            df -kh
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test scan
+        run: |
+            echo "Running security scan..." 
+            date
+            
