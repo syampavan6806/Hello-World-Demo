@@ -1,0 +1,21 @@
+name: test-workflow
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test step
+        run: |
+            echo "This is a test workflow triggered manually." 
+            date
+            df -kh
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: test build
+        run: |
+            echo "Building the application..." 
+            date
+            ls -la
