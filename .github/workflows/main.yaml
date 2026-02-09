@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: execute demo script
         run: |
             chmod +x demo.sh
-            ./ demo.sh
+            ./demo.sh
     
   deploy:
     runs-on: ubuntu-latest
