@@ -9,11 +9,12 @@ jobs:
     steps:
       - name: hello world demo
         run: |
-            echo "Hello, World! This is a demo workflow." 
+            echo "Hello, World! This is a demo workflow." > hello.txt 
             date
             ls -la
             whoami
             pwd
+            cat hello.txt
   deploy:
     runs-on: ubuntu-latest
     needs: build
